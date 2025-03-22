@@ -1,9 +1,14 @@
 import './global.css'
+import styles from './App.module.css'
+import { Header } from './components/Header'
 
 function App() {
   return (
     <div>
-      Todo List
+      <Header />
+      <div className={styles.wrapper}>
+        
+      </div>
     </div>
   )
 }
