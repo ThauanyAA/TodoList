@@ -7,6 +7,8 @@ interface ListProps {
   onDelete: (task_id: string) => void
 }
 export function List({ tasks, onComplete, onDelete }: ListProps) {
+  const completedTasks = tasks.reduce((ac, task) => task.isCompleted ? ac + 1 : ac, 0)
+  
   return (
     <div>
       <header>
@@ -14,7 +16,7 @@ export function List({ tasks, onComplete, onDelete }: ListProps) {
           Tarefas criadas{' '}<span>{tasks.length}</span>
         </div>
         <div>
-          Concluídas <span>0</span>
+          Concluídas <span>{completedTasks}</span>
         </div>
       </header>
       <main>
