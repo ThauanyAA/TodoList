@@ -1,18 +1,23 @@
 import { PlusCircle } from 'phosphor-react';
 import styles from './AddTaskForm.module.css';
 import { useState, FormEvent } from 'react';
+import { Task } from '../types/task'
 
 interface AddTaskFormProps {
-  onCreateTask: (task: string) => void;
+  onCreateTask: (task: Task) => void;
 }
 
 export function AddTaskForm({ onCreateTask }: AddTaskFormProps) {
-  const [task, setTask] = useState('');
+  const [titleTask, setTitleTask] = useState('');
   function handleCreateTask(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (task) {
-      onCreateTask(task);
-      setTask('');
+    if (titleTask) {
+      onCreateTask({
+        id: String(Math.random()),
+        title: titleTask,
+        isCompleted: false,
+      });
+      setTitleTask('');
     }
   } 
   return (
@@ -21,8 +26,8 @@ export function AddTaskForm({ onCreateTask }: AddTaskFormProps) {
         <input
           className={styles.inputField} 
           placeholder="Adicione uma nova tarefa"
-          value={task}
-          onChange={event => setTask(event.target.value)}
+          value={titleTask}
+          onChange={event => setTitleTask(event.target.value)}
         />
       </div>
       <button
