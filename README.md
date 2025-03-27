@@ -59,7 +59,7 @@ This project follows the challenge proposed by Rocketseat. You can find the chal
 ![Empty State](./public/empty_state.png)
 
 ### Task List with Completed Items
-![Task List](./public/application_with_tasks.png)
+![Task List](./public/with_tasks.png)
 
 ## 📜 License
 
