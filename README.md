@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# ToDo List - React Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React.js project developed as part of a challenge proposed by Rocketseat. The goal of this project was to reinforce fundamental React concepts by building a simple and functional To-Do List application.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks
+- Mark tasks as completed
+- Delete tasks
+- Task counter (total and completed)
+- Interactive UI with a modern and responsive design
 
-## Expanding the ESLint configuration
+## 🖥️ Preview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Check out the project design on Figma: [ToDo List Figma Design](https://www.figma.com/design/LVVGqDk0GHFVCRRIz2l9Jn/ToDo-List-%E2%80%A2-Desafio-React-\(Copy\)?node-id=56-96\&p=f\&t=afdXB7ZnJCiMyq5Z-0)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Tech Stack
+
+- React.js
+- Vite
+- TypeScript (if applicable)
+- CSS Modules
+- Phosphor Icons
+
+## 🛠 Installation & Usage
+
+### Clone the repository:
+
+```bash
+git clone https://github.com/ThauanyAA/TodoList.git
+cd todo-list-react
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
+
+### Run the application:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Then, open your browser and go to `http://localhost:5173`.
+
+## 🎯 Challenge Instructions
+
+This project follows the challenge proposed by Rocketseat. You can find the challenge details here: [Challenge Instructions](https://efficient-sloth-d85.notion.site/Desafio-01-Praticando-os-conceitos-do-ReactJS-91fd63dd1a5b4a2796152de293ec1074)
+
+## 📸 Screenshots
+
+### Without Tasks
+![Empty State](./public/empty_state.png)
+
+### Task List with Completed Items
+![Task List](./public/application_with_tasks.png)
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with 💜 by [Thauany](https://github.com/ThauanyAA) 🚀
+
