@@ -1,0 +1,47 @@
+.container {
+  padding: 3rem 0;
+  width: 736px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.stats {
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background-color: var(--gray-400);
+  margin: 0 4px;
+  color: var(--gray-200);
+}
+
+.emptyState {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+  line-height: 1.4;
+}
