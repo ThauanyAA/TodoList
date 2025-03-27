@@ -1,0 +1,68 @@
+.taskContainer {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--gray-500);
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+}
+
+.taskContainer + .taskContainer {
+  margin-top: 0.75rem;
+}
+
+.taskContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  display: inline;
+  cursor: pointer;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.taskContent input[type="checkbox"] {
+  display: none;
+}
+
+.customCheckbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customCheckbox:hover {
+  border: 1px solid var(--blue-dark);
+}
+
+/* Quando marcado, muda o fundo e adiciona um ícone */
+input[type="checkbox"]:checked + .customCheckbox {
+  background-color: var(--purple-dark);
+  border: 1px solid var(--purple-dark);
+}
+
+input[type="checkbox"]:checked:hover + .customCheckbox {
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.customCheckbox svg {
+  color: var(--gray-100);
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+}
